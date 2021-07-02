@@ -36,7 +36,7 @@ $samosapavprice=$_GET['samosapavprice'];
 $price1=0;
 $price2=0;
 if($vadapavprice<$samosapavprice){
-    for($i=1;$i<=$samosa;$i++){
+    for($i=1;$i<=$samosa&&$breads>1;$i++){
         $price1=$samosapavprice*$i;
         $breads=$breads-2;
     }
@@ -48,7 +48,7 @@ if($vadapavprice<$samosapavprice){
     echo"Maximum profit possible is Rs.$totalprice";
 }
 if($vadapavprice>=$samosapavprice){
-    for($i=1;$i<=$vada;$i++){
+    for($i=1;$i<=$vada&&$breads>1;$i++){
         $price1=$vadapavprice*$i;
         $breads=$breads-2;
     }
